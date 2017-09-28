@@ -1,14 +1,17 @@
 function getQuote() {
-
+  var quoteOutput = randomQuotes();
+  var quote = quoteOutput[0];
+  var author = quoteOutput[1];
   $(".quote-text").animate({
       opacity: 0
     }, 2000,
     function() {
       $("#quoteImage").attr('src', getImage());
+      $("#quoteImage").css("visibility", "visible");
       $(this).animate({
         opacity: 1
       }, 1000);
-      $('#text').text('"'+ randomQuotes()[0]+'"');
+      $('#text').text('"'+ quote +'"');
     });
 
    $("#quoteImage").animate({
@@ -27,7 +30,7 @@ function getQuote() {
       $(this).animate({
         opacity: 1
       }, 1000);
-      $('#author').html("- " + randomQuotes()[1]);
+      $('#author').html("- " + author);
     });
 
     colorAnimationShow();
