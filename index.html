@@ -25,8 +25,8 @@
     <div class="row">
       <div class="col-sm-4"></div>
       <div class="col-sm-4">
-        <div class="card" style="width:400px;">
-          <img class="card-img-top" style="opacity:0.6;" src="http://lorempixel.com/400/200/nature/" id="quoteImage" alt="nature image">
+        <div class="card" style="width:400px; height:375px">
+          <img class="card-img-top" style="opacity:0.6;"  id="quoteImage" alt="nature image">
           <div class="card-block">
             <h4 class="card-title quote-text" id="text"></h4>
             <h6 class="card-subtitle mb-2 text-muted quote-author" id="author"></h6>
@@ -41,7 +41,6 @@
   $(document).ready(function() {
     getQuote();
     setInterval(function(){
-      $("#quoteImage").attr('src', getImage());
       getQuote();
     },8000);
   });

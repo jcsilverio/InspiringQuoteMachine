@@ -10,6 +10,15 @@ function getQuote() {
       $('#text').text('"'+ randomQuotes()[0]+'"');
     });
 
+   $("#quoteImage").animate({
+      opacity: 0
+    }, 2000,
+    function() {
+      $(this).animate({
+        opacity: 1
+      }, 1000);
+    });
+
   $(".quote-author").animate({
       opacity: 0
     }, 2800,
@@ -22,9 +31,11 @@ function getQuote() {
 
   var color = randomColors();
   var p = $("html body").css("background-color", randomColors());
-  p.hide(1500).show(1500);
+  p.show(1500);
   p.css("background-color", color);
   p.css("color", color);
+
+  $("#quoteImage").attr('src', getImage());
 
 
 
