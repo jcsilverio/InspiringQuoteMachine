@@ -18,3 +18,7 @@ function randomColors () {
 }
 
 
+function getImage () {
+  var randomImage = 'http://lorempixel.com/400/200/nature/';
+  return randomImage;
+}
