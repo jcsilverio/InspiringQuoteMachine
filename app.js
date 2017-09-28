@@ -10,6 +10,8 @@ function randomQuotes() {
     randomQuotes();
   } else {
     randomQuoteVal = quotes[randomQuoteIndex];
+    console.log('randomQuoteVal: ',randomQuoteVal);
+    console.log('randomQuoteIndex: ',randomQuoteIndex);
     return quotes[randomQuoteIndex];
   }
 
