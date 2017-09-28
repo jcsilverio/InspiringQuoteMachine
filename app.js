@@ -12,6 +12,7 @@ function getQuote() {
         opacity: 1
       }, 1000);
       $('#text').text('"'+ quote +'"');
+          colorAnimationShow();
     });
 
    $("#quoteImage").animate({
@@ -33,7 +34,7 @@ function getQuote() {
       $('#author').html("- " + author);
     });
 
-    colorAnimationShow();
+
 
 
 
