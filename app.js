@@ -1,3 +1,65 @@
+var currentColor;
+var colors = ['#015d82', '#9138b7', '#2a8e83', '#f0802b'];
+var totalNumImages = 17;  //number of images in /imgs folder
+
+function randomQuotes() {
+  var randomQuoteIndex = Math.floor(Math.random() * quotes.length);
+  return quotes[randomQuoteIndex];
+
+}
+
+function randomColors() {
+  var randomColorIndex = Math.floor(Math.random() * colors.length);
+  if (currentColor === colors[randomColorIndex]) {
+    randomColors();
+  } else {
+    currentColor = colors[randomColorIndex];
+  }
+
+  return currentColor;
+
+}
+
+
+function getImage() {
+
+  var randomImageNumber= Math.floor(Math.random() * totalNumImages) + 1;
+  var imagePrefix = 'imgs/pexels-photo';
+  var imageSuffix = '.jpg';
+  var randomImage = imagePrefix + randomImageNumber + imageSuffix;
+  return randomImage;
+}
+
+
+function colorAnimationShow() {
+
+
+  var $p = $("html body");
+
+  //$p.css("background-color", currentColor);
+  $p.show(1500);
+  $p.animate({
+    backgroundColor: currentColor,
+    color: currentColor}, 800);
+  //p.css("background-color", color);
+  //$p.css("color", currentColor);
+  //$p.animate({color: currentColor}, 200);
+  console.log('show');
+}
+
+
+
+function colorAnimationHide() {
+
+
+  var $p = $("html body");
+  $p.hide(1500);
+  console.log('hide');
+  // p.css("background-color", color);
+  //p.css("color", currentColor);
+
+}
+
 function getQuote() {
   var quoteOutput = randomQuotes();
   var quote = quoteOutput[0];
@@ -72,20 +134,3 @@ function onLoadGetQuote() {
       $('#author').html("- " + author);
     });
   }
-/*
-  (function() {
-
-    var quotes = $(".quotes");
-    var quoteIndex = -1;
-
-    function showNextQuote() {
-      ++quoteIndex;
-      quotes.eq(quoteIndex % quotes.length)
-        .fadeIn(2000)
-        .delay(2000)
-        .fadeOut(2000, showNextQuote);
-    }
-
-    showNextQuote();
-
-  })();*/
