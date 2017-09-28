@@ -13,7 +13,7 @@ var quotes = [
   ['The most difficult thing is the decision to act, the rest is merely tenacity.', ' Amelia Earhart']
 ];
 var colors = ['#015d82', '#9138b7', '#2a8e83', '#f0802b'];
-
+var totalNumImages = 17;  //number of images in /imgs folder
 
 function randomQuotes() {
   var randomQuoteIndex = Math.floor(Math.random() * quotes.length);
@@ -35,7 +35,13 @@ function randomColors() {
 
 
 function getImage() {
-  var randomImage = 'http://lorempixel.com/400/200/nature';
+
+  var randomImageNumber= Math.floor(Math.random() * totalNumImages) + 1;
+  var imagePrefix = 'imgs/pexels-photo';
+  var imageSuffix = '.jpg';
+  var randomImage = imagePrefix + randomImageNumber + imageSuffix;
+  console.log('randomImage: ', randomImage);
+  console.log('randomImage typeof: ', typeof randomImage);
   return randomImage;
 }
 
