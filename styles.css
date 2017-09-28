@@ -29,6 +29,11 @@ img {
   color: #555555;
 }
 
+.bg-4 {
+
+  color: #ffffff;
+}
+
 .container-fluid {
   padding-top: 50px;
   padding-bottom: 70px;
