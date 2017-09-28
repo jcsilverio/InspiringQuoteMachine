@@ -1,20 +1,11 @@
 var currentColor;
 var randomImage;
-var randomQuoteVal;
 var colors = ['#015d82', '#9138b7', '#2a8e83', '#f0802b'];
 var totalNumImages = 17; //number of images in /imgs folder
 // images must be named in the format: pexels-photo12.jpg
 function randomQuotes() {
   var randomQuoteIndex = Math.floor(Math.random() * quotes.length);
-  if(randomQuoteVal === quotes[randomQuoteIndex]){
-    randomQuotes();
-  } else {
-    randomQuoteVal = quotes[randomQuoteIndex];
-    console.log('randomQuoteVal: ',randomQuoteVal);
-    console.log('randomQuoteIndex: ',randomQuoteIndex);
-    return quotes[randomQuoteIndex];
-  }
-
+  return quotes[randomQuoteIndex];
 }
 
 function randomColors() {
@@ -55,7 +46,7 @@ function colorAnimationShow() {
 
 function colorAnimationHide() {
   var $p = $("html body");
-  $p.hide(1500);
+  //$p.hide(1500);
 }
 
 function getQuote() {
