@@ -40,8 +40,6 @@ function getImage() {
   var imagePrefix = 'imgs/pexels-photo';
   var imageSuffix = '.jpg';
   var randomImage = imagePrefix + randomImageNumber + imageSuffix;
-  console.log('randomImage: ', randomImage);
-  console.log('randomImage typeof: ', typeof randomImage);
   return randomImage;
 }
 
@@ -49,18 +47,21 @@ function getImage() {
 function colorAnimationShow() {
 
 
-  var p = $("html body").css("background-color", currentColor);
-  p.show(1500);
+  var $p = $("html body");
+
+  //$p.css("background-color", currentColor);
+  $p.show(1500);
+  $p.animate({backgroundColor: currentColor}, 800);
   //p.css("background-color", color);
-  p.css("color", currentColor);
+  $p.css("color", currentColor);
   console.log('show');
 }
 
 function colorAnimationHide() {
 
 
-  var p = $("html body");
-  p.hide(1500);
+  var $p = $("html body");
+  $p.hide(1500);
   console.log('hide');
   // p.css("background-color", color);
   //p.css("color", currentColor);
