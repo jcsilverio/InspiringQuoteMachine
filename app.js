@@ -4,6 +4,7 @@ function getQuote() {
       opacity: 0
     }, 2000,
     function() {
+      $("#quoteImage").attr('src', getImage());
       $(this).animate({
         opacity: 1
       }, 1000);
@@ -29,13 +30,9 @@ function getQuote() {
       $('#author').html("- " + randomQuotes()[1]);
     });
 
-  var color = randomColors();
-  var p = $("html body").css("background-color", randomColors());
-  p.show(1500);
-  p.css("background-color", color);
-  p.css("color", color);
+    colorAnimationShow();
 
-  $("#quoteImage").attr('src', getImage());
+
 
 
 
