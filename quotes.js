@@ -51,11 +51,16 @@ function colorAnimationShow() {
 
   //$p.css("background-color", currentColor);
   $p.show(1500);
-  $p.animate({backgroundColor: currentColor}, 800);
+  $p.animate({
+    backgroundColor: currentColor,
+    color: currentColor}, 800);
   //p.css("background-color", color);
-  $p.css("color", currentColor);
+  //$p.css("color", currentColor);
+  //$p.animate({color: currentColor}, 200);
   console.log('show');
 }
+
+
 
 function colorAnimationHide() {
 
