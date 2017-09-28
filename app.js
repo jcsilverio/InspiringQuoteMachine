@@ -33,26 +33,45 @@ function getQuote() {
       }, 1000);
       $('#author').html("- " + author);
     });
-
-
-
-
-
-
-
-
-
-  /* $("html body").animate({
-    backgroundColor: color,
-    color: color
-  }, 1000);
-  $(".button").animate({
-    backgroundColor: color
-  }, 1000);
-
-*/
 }
 
+
+function onLoadGetQuote() {
+  var quoteOutput = randomQuotes();
+  var quote = quoteOutput[0];
+  var author = quoteOutput[1];
+  $(".quote-text").animate({
+      opacity: 0
+    }, 100,
+    function() {
+      $("#quoteImage").attr('src', getImage());
+      $("#quoteImage").css("visibility", "visible");
+      $(this).animate({
+        opacity: 1
+      }, 500);
+      $('#text').text('"'+ quote +'"');
+          //colorAnimationShow();
+    });
+
+   $("#quoteImage").animate({
+      opacity: 0
+    }, 0,
+    function() {
+      $(this).animate({
+        opacity: 1
+      }, 750);
+    });
+
+  $(".quote-author").animate({
+      opacity: 0
+    }, 1400,
+    function() {
+      $(this).animate({
+        opacity: 1
+      }, 500);
+      $('#author').html("- " + author);
+    });
+  }
 /*
   (function() {
 
