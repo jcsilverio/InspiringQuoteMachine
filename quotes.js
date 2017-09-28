@@ -19,7 +19,7 @@ var quotes = [
   ['You can never leave footprints that last if you are always walking on tiptoe.', ' Leymah Gbowee'],
   ['If you don’t like the road you’re walking, start paving another one', 'Dolly Parton'],
   ['If you think taking care of yourself is selfish, change your mind. If you don’t, you’re simply ducking your responsibilities.', 'Ann Richards'],
-  ['ou can’t give up! If you give up, you’re like everybody else.', 'Chris Evert'],
+  ['You can’t give up! If you give up, you’re like everybody else.', 'Chris Evert'],
   ['No matter how difficult and painful it may be, nothing sounds as good to the soul as the truth.', 'Martha Beck'],
   ['Done is better than perfect.', 'Sheryl Sandberg'],
   ['One of the secrets to staying young is to always do things you don’t know how to do, to keep learning.', 'Ruth Reichl'],
