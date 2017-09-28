@@ -42,13 +42,6 @@ function colorAnimationShow() {
   }, 800);
 }
 
-
-
-function colorAnimationHide() {
-  var $p = $("html body");
-  //$p.hide(1500);
-}
-
 function getQuote() {
   var quoteOutput = randomQuotes();
   var quote = quoteOutput[0];
