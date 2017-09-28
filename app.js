@@ -23,11 +23,11 @@ function getImage() {
   var randomImageNumber = Math.floor(Math.random() * totalNumImages) + 1;
   var imagePrefix = 'imgs/pexels-photo';
   var imageSuffix = '.jpg';
-   if(randomImage === imagePrefix + randomImageNumber + imageSuffix){
+  if (randomImage === imagePrefix + randomImageNumber + imageSuffix) {
     getImage();
-   } else {
-   randomImage = imagePrefix + randomImageNumber + imageSuffix;
-}
+  } else {
+    randomImage = imagePrefix + randomImageNumber + imageSuffix;
+  }
   return randomImage;
 }
 
@@ -45,6 +45,16 @@ function getQuote() {
   var quoteOutput = randomQuotes();
   var quote = quoteOutput[0];
   var author = quoteOutput[1];
+
+  $("#tweetBtn").animate({
+      opacity: 0
+    }, 2000,
+    function() {
+      $(this).animate({
+        opacity: 0.7
+      }, 1000);
+    });
+
   $(".quote-text").animate({
       opacity: 0
     }, 2000,
