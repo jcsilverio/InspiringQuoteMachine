@@ -28,5 +28,4 @@ var quotes = [
   ['Look your best - who said love is blind?', 'Mae West'],
   ['It took me quite a long time to develop a voice, and now that I have it, I am not going to be silent.', 'Madeleine Albright'],
   ['Don’t take too much credit for your children — or too much blame!', 'Debora Spar'],
-
 ];
