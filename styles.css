@@ -32,8 +32,31 @@ img {
 .container-fluid {
   padding-top: 50px;
   padding-bottom: 70px;
+  position: relative;
 }
 
 #quoteImage {
   visibility: hidden;
 }
+
+#tweetBtn {
+  position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.btn-primary.active,
+.btn-primary:active,
+.show>.btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #025aa5;
+  background-image: none;
+  border-color: #01549b
+}
+
+#tweetBtn:hover {
+  color: #fff;
+  background-color: #0275d8;
+  border-color: #0275d8
+}
+
