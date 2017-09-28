@@ -1,0 +1,43 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif
+}
+
+body,
+html {
+  height: 100%;
+  line-height: 1.8;
+  padding-top: 30px;
+}
+
+body {
+  background-color: rgb(77, 99, 111);
+}
+
+img {
+  border: 2px solid white;
+}
+
+.bg-1 {
+  background-color: rgb(77, 99, 111);
+  /* sea blue */
+  color: #555555;
+}
+
+.container-fluid {
+  padding-top: 50px;
+  padding-bottom: 70px;
+}
+
+
+
+
+
+
+
+
