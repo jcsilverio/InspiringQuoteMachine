@@ -1,11 +1,18 @@
 var currentColor;
 var randomImage;
+var randomQuoteVal;
 var colors = ['#015d82', '#9138b7', '#2a8e83', '#f0802b'];
 var totalNumImages = 17; //number of images in /imgs folder
-
+// images must be named in the format: pexels-photo12.jpg
 function randomQuotes() {
   var randomQuoteIndex = Math.floor(Math.random() * quotes.length);
-  return quotes[randomQuoteIndex];
+  if(randomQuoteVal === quotes[randomQuoteIndex]){
+    randomQuotes();
+  } else {
+    randomQuoteVal = quotes[randomQuoteIndex];
+    return randomQuoteVal;
+  }
+
 }
 
 function randomColors() {
