@@ -10,7 +10,7 @@ function randomQuotes() {
     randomQuotes();
   } else {
     randomQuoteVal = quotes[randomQuoteIndex];
-    return randomQuoteVal;
+    return quotes[randomQuoteIndex];
   }
 
 }
