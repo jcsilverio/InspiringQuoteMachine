@@ -1,4 +1,4 @@
-
+var currentColor;
 var quotes = [
 ['If I stop to kick every barking dog, I am not going to get where I’m going.', 'Jackie Joyner-Kersee'],
 ['Optimism is the faith that leads to achievement', 'Helen Keller'],
@@ -23,7 +23,14 @@ function randomQuotes () {
 
 function randomColors () {
   var randomColorIndex = Math.floor(Math.random() * colors.length);
-  return colors[randomColorIndex];
+  if (currentColor === colors[randomColorIndex]){
+    randomColors();
+  } else {
+  currentColor = colors[randomColorIndex];
+}
+  console.log('currentColor',currentColor);
+  return currentColor;
+
 }
 
 
@@ -34,21 +41,21 @@ function getImage () {
 
 
 function colorAnimationShow () {
-  var color = randomColors();
 
-  var p = $("html body").css("background-color", randomColors());
+
+  var p = $("html body").css("background-color", currentColor);
   p.show(1500);
   //p.css("background-color", color);
-  p.css("color", color);
+  p.css("color", currentColor);
 
 }
 
 function colorAnimationHide () {
-  var color = randomColors();
+
 
   var p = $("html body");
   p.hide(1500);
  // p.css("background-color", color);
-  p.css("color", color);
+  p.css("color", currentColor);
 
 }
