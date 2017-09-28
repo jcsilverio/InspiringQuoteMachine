@@ -1,4 +1,3 @@
-
 var quotes = [
   ['If I stop to kick every barking dog, I am not going to get where I’m going.', 'Jackie Joyner-Kersee'],
   ['Optimism is the faith that leads to achievement', 'Helen Keller'],
@@ -12,5 +11,3 @@ var quotes = [
   ['Power’s not given to you. You have to take it.', 'Beyoncé Knowles Carter'],
   ['The most difficult thing is the decision to act, the rest is merely tenacity.', ' Amelia Earhart']
 ];
-
-

@@ -1,11 +1,10 @@
 var currentColor;
 var colors = ['#015d82', '#9138b7', '#2a8e83', '#f0802b'];
-var totalNumImages = 17;  //number of images in /imgs folder
+var totalNumImages = 17; //number of images in /imgs folder
 
 function randomQuotes() {
   var randomQuoteIndex = Math.floor(Math.random() * quotes.length);
   return quotes[randomQuoteIndex];
-
 }
 
 function randomColors() {
@@ -15,15 +14,13 @@ function randomColors() {
   } else {
     currentColor = colors[randomColorIndex];
   }
-
   return currentColor;
-
 }
 
 
 function getImage() {
 
-  var randomImageNumber= Math.floor(Math.random() * totalNumImages) + 1;
+  var randomImageNumber = Math.floor(Math.random() * totalNumImages) + 1;
   var imagePrefix = 'imgs/pexels-photo';
   var imageSuffix = '.jpg';
   var randomImage = imagePrefix + randomImageNumber + imageSuffix;
@@ -32,32 +29,19 @@ function getImage() {
 
 
 function colorAnimationShow() {
-
-
   var $p = $("html body");
-
-  //$p.css("background-color", currentColor);
   $p.show(1500);
   $p.animate({
     backgroundColor: currentColor,
-    color: currentColor}, 800);
-  //p.css("background-color", color);
-  //$p.css("color", currentColor);
-  //$p.animate({color: currentColor}, 200);
-  console.log('show');
+    color: currentColor
+  }, 800);
 }
 
 
 
 function colorAnimationHide() {
-
-
   var $p = $("html body");
   $p.hide(1500);
-  console.log('hide');
-  // p.css("background-color", color);
-  //p.css("color", currentColor);
-
 }
 
 function getQuote() {
@@ -73,11 +57,11 @@ function getQuote() {
       $(this).animate({
         opacity: 1
       }, 1000);
-      $('#text').text('"'+ quote +'"');
-          colorAnimationShow();
+      $('#text').text('"' + quote + '"');
+      colorAnimationShow();
     });
 
-   $("#quoteImage").animate({
+  $("#quoteImage").animate({
       opacity: 0
     }, 2000,
     function() {
@@ -111,11 +95,10 @@ function onLoadGetQuote() {
       $(this).animate({
         opacity: 1
       }, 500);
-      $('#text').text('"'+ quote +'"');
-          //colorAnimationShow();
+      $('#text').text('"' + quote + '"');
     });
 
-   $("#quoteImage").animate({
+  $("#quoteImage").animate({
       opacity: 0
     }, 0,
     function() {
@@ -133,4 +116,4 @@ function onLoadGetQuote() {
       }, 500);
       $('#author').html("- " + author);
     });
-  }
+}
