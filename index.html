@@ -16,33 +16,41 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script language="JavaScript" src="quotes.js" type="text/javascript"></script>
-   <script language="JavaScript" src="app.js" type="text/javascript"></script>
-   <link rel="stylesheet" href="styles.css">
+  <script language="JavaScript" src="app.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <div class="container-fluid bg-1 text-center">
-   <div class="row">
-    <div class="col-sm-4"></div>
-   <div class="col-sm-4">
-    <div class="card" style="width:400px;">
-      <img class="card-img-top" style="opacity:0.7;" src="http://lorempixel.com/400/200/nature" alt="nature image">
-      <div class="card-block">
-
-        <h4 class="card-title quote-text" id="text"></h4>
-        <h6 class="card-subtitle mb-2 text-muted quote-author" id="author"></h6>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+  <div class="container-fluid text-center">
+    <div class="row">
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4">
+        <div class="card" style="width:400px;">
+          <img class="card-img-top" style="opacity:0.7;" src="http://lorempixel.com/400/200/nature" alt="nature image">
+          <div class="card-block">
+            <h4 class="card-title quote-text" id="text"></h4>
+            <h6 class="card-subtitle mb-2 text-muted quote-author" id="author"></h6>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
       </div>
+      <div class="col-sm-4"></div>
     </div>
   </div>
-     <div class="col-sm-4"></div>
-  </div>
-  </div>
-<script>
-    $(document).ready(function() {
+  <script>
+  $(document).ready(function() {
+    getQuote();
+    setInterval(function() {
+      var p = $("html body").css("background-color", randomColors());
+      p.hide(1500).show(1500);
+      p.queue(function() {
+        p.css("background-color", randomColors());
+      });
+
       getQuote();
+    }, 8000);
   });
-</script>
+  </script>
 </body>
 
 </html>

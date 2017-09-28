@@ -1,10 +1,6 @@
-var currentQuote = randomQuotes()[0];
-var currentAuthor = randomQuotes()[1];
 
 
 function getQuote() {
-  console.log(currentAuthor);
-  console.log(currentQuote);
 
   $(".quote-text").animate({
       opacity: 0
@@ -13,7 +9,7 @@ function getQuote() {
       $(this).animate({
         opacity: 1
       }, 500);
-      $('#text').text(currentQuote);
+      $('#text').text(randomQuotes()[0]);
     });
 
   $(".quote-author").animate({
@@ -23,19 +19,19 @@ function getQuote() {
       $(this).animate({
         opacity: 1
       }, 1000);
-      $('#author').html("- " + currentAuthor);
+      $('#author').html("- " + randomQuotes()[1]);
     });
 
-  var color = Math.floor(Math.random() * colors.length);
-  $("html body").animate({
-    backgroundColor: colors[color],
-    color: colors[color]
+
+  /* $("html body").animate({
+    backgroundColor: color,
+    color: color
   }, 1000);
   $(".button").animate({
-    backgroundColor: colors[color]
+    backgroundColor: color
   }, 1000);
 
-
+*/
 }
 
 /*
