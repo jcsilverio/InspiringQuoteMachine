@@ -93,6 +93,16 @@ function onLoadGetQuote() {
   var quoteOutput = randomQuotes();
   var quote = quoteOutput[0];
   var author = quoteOutput[1];
+
+    $("#tweetBtn").animate({
+      opacity: 0
+    }, 2000,
+    function() {
+      $(this).animate({
+        opacity: 0.7
+      }, 1000);
+    });
+
   $(".quote-text").animate({
       opacity: 0
     }, 100,
