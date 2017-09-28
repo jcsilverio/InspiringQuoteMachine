@@ -1,5 +1,8 @@
 var currentColor;
 var randomImage;
+var quote;
+var author;
+var tweetQuote;
 var colors = ['#015d82', '#9138b7', '#2a8e83', '#f0802b'];
 var totalNumImages = 17; //number of images in /imgs folder
 function randomQuotes() {
@@ -43,8 +46,9 @@ function colorAnimationShow() {
 
 function getQuote() {
   var quoteOutput = randomQuotes();
-  var quote = quoteOutput[0];
-  var author = quoteOutput[1];
+  quote = quoteOutput[0];
+  author = quoteOutput[1];
+  tweetQuote = '"' + quote + '"' +   '  -' + author;
 
   $("#tweetBtn").animate({
       opacity: 0
@@ -93,6 +97,7 @@ function onLoadGetQuote() {
   var quoteOutput = randomQuotes();
   var quote = quoteOutput[0];
   var author = quoteOutput[1];
+  tweetQuote = '"' + quote + '"' +   '  -' + author;
 
     $("#tweetBtn").animate({
       opacity: 0

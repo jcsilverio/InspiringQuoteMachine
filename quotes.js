@@ -14,7 +14,6 @@ var quotes = [
   ['You can waste your lives drawing lines. Or you can live your life crossing them.','Shonda Rhimes'],
   ['I’d rather regret the things I’ve done than regret the things I haven’t done.',' Lucille Ball'],
   ['I hope the fathers and mothers of little girls will look at them and say ‘yes, women can.’','Dilma Rousseff'],
-  ['Beware of monotony; it’s the mother of all the deadly sins.','Edith Wharton'],
   ['If you don’t risk anything, you risk even more.','Erica Jong'],
   ['I have stood on a mountain of no’s for one yes.','B. Smith'],
   ['The way we talk to our children becomes their inner voice','Peggy O’Mara'],
