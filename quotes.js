@@ -38,7 +38,7 @@ function colorAnimationShow () {
 
   var p = $("html body").css("background-color", randomColors());
   p.show(1500);
-  p.css("background-color", color);
+  //p.css("background-color", color);
   p.css("color", color);
 
 }
@@ -46,9 +46,9 @@ function colorAnimationShow () {
 function colorAnimationHide () {
   var color = randomColors();
 
-  var p = $("html body").css("background-color", randomColors());
+  var p = $("html body");
   p.hide(1500);
-  p.css("background-color", color);
+ // p.css("background-color", color);
   p.css("color", color);
 
 }
