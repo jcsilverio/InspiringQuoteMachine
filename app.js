@@ -37,6 +37,7 @@ function getQuote() {
 
 
 
+
   /* $("html body").animate({
     backgroundColor: color,
     color: color
