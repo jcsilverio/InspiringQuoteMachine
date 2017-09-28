@@ -1,26 +1,31 @@
-
-
 function getQuote() {
 
   $(".quote-text").animate({
       opacity: 0
-    }, 500,
+    }, 2000,
     function() {
       $(this).animate({
         opacity: 1
-      }, 500);
+      }, 1000);
       $('#text').text(randomQuotes()[0]);
     });
 
   $(".quote-author").animate({
       opacity: 0
-    }, 500,
+    }, 2800,
     function() {
       $(this).animate({
         opacity: 1
       }, 1000);
       $('#author').html("- " + randomQuotes()[1]);
     });
+
+
+  var p = $("html body").css("background-color", randomColors());
+  p.hide(1500).show(1500);
+  p.css("background-color", randomColors());
+
+
 
 
   /* $("html body").animate({

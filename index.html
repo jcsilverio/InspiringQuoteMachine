@@ -30,7 +30,7 @@
           <div class="card-block">
             <h4 class="card-title quote-text" id="text"></h4>
             <h6 class="card-subtitle mb-2 text-muted quote-author" id="author"></h6>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+           <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
           </div>
         </div>
       </div>
@@ -40,15 +40,9 @@
   <script>
   $(document).ready(function() {
     getQuote();
-    setInterval(function() {
-      var p = $("html body").css("background-color", randomColors());
-      p.hide(1500).show(1500);
-      p.queue(function() {
-        p.css("background-color", randomColors());
-      });
-
+    setInterval(function(){
       getQuote();
-    }, 8000);
+    },8000);
   });
   </script>
 </body>
