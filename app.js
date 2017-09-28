@@ -48,7 +48,7 @@ function getQuote() {
   var quoteOutput = randomQuotes();
   quote = quoteOutput[0];
   author = quoteOutput[1];
-  tweetQuote = '"' + quote + '"' +   '  -' + author;
+  tweetQuote = '"' + quote + '"' + '  -' + author;
 
   $("#tweetBtn").animate({
       opacity: 0
@@ -97,9 +97,9 @@ function onLoadGetQuote() {
   var quoteOutput = randomQuotes();
   var quote = quoteOutput[0];
   var author = quoteOutput[1];
-  tweetQuote = '"' + quote + '"' +   '  -' + author;
+  tweetQuote = '"' + quote + '"' + '  -' + author;
 
-    $("#tweetBtn").animate({
+  $("#tweetBtn").animate({
       opacity: 0
     }, 2000,
     function() {

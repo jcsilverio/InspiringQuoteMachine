@@ -30,7 +30,6 @@ img {
 }
 
 .bg-4 {
-
   color: #ffffff;
 }
 
@@ -46,8 +45,8 @@ img {
 
 #tweetBtn {
   position: absolute;
-    bottom: 0;
-    right: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .btn-primary.active,
@@ -64,4 +63,3 @@ img {
   background-color: #0275d8;
   border-color: #0275d8
 }
-
