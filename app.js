@@ -5,8 +5,22 @@ var author;
 var tweetQuote;
 var colors = ['#015d82', '#9138b7', '#2a8e83', '#f0802b'];
 var totalNumImages = 17; //number of images in /imgs folder
+
+var displayedQuotes = {};
+
 function randomQuotes() {
+  // if all quotes have been displayed, clear object
+  if(Object.keys(displayedQuotes).length >= quotes.length){
+    displayedQuotes = {};
+  }
+
   var randomQuoteIndex = Math.floor(Math.random() * quotes.length);
+  if (!displayedQuotes[randomQuoteIndex]) {
+    displayedQuotes[randomQuoteIndex] = true;
+    return quotes[randomQuoteIndex];
+  } else {
+    randomQuotes();
+  }
   return quotes[randomQuoteIndex];
 }
 

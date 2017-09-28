@@ -44,6 +44,7 @@
     setInterval(function() {
       randomColors();
       getQuote();
+      console.log('displayedQuotes: ',displayedQuotes);
     }, 8000);
     $("#tweetBtn").on("click", function() {
       $(this).attr("target", "_blank");
