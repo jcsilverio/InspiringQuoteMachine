@@ -1,4 +1,5 @@
 var currentColor;
+var randomImage;
 var colors = ['#015d82', '#9138b7', '#2a8e83', '#f0802b'];
 var totalNumImages = 17; //number of images in /imgs folder
 
@@ -23,7 +24,11 @@ function getImage() {
   var randomImageNumber = Math.floor(Math.random() * totalNumImages) + 1;
   var imagePrefix = 'imgs/pexels-photo';
   var imageSuffix = '.jpg';
-  var randomImage = imagePrefix + randomImageNumber + imageSuffix;
+   if(randomImage === imagePrefix + randomImageNumber + imageSuffix){
+    getImage();
+   } else {
+   randomImage = imagePrefix + randomImageNumber + imageSuffix;
+}
   return randomImage;
 }
 
