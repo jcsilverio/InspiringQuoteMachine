@@ -64,6 +64,5 @@ var quotes = [
   ['Cherish forever what makes you unique, cuz you’re really a yawn if it goes', ' Bette Midler'],
   ['Style is a way to say who you are without having to speak.', 'Rachel Zoe'],
   ['Dying seems less sad than having lived too little.', 'Gloria Steinem'],
-  ['Women asking for raises should not only know their value, but they should ask with the confidence that they’re helping the company to be successful.', 'Senator Kirsten Gillibrand'],
   ['Many receive advice, only the wise profit from it.', 'Harper Lee'],
 ];
