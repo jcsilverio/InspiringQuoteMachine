@@ -1,1 +1,1 @@
-# InspiringQuotes
+# Inspiring Quotes from Extraordinary Women
