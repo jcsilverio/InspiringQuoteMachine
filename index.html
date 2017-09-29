@@ -17,6 +17,8 @@
   <script language="JavaScript" src="app.js" type="text/javascript"></script>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script language="JavaScript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js" type="text/javascript"></script>
+
 </head>
 
 <body>
@@ -38,13 +40,13 @@
   </div>
   <script>
   $(document).ready(function() {
+    generateQuotesArray();
     randomColors();
     colorAnimationShow();
     onLoadGetQuote();
     setInterval(function() {
       randomColors();
       getQuote();
-      console.log('displayedQuotes: ',displayedQuotes);
     }, 8000);
     $("#tweetBtn").on("click", function() {
       $(this).attr("target", "_blank");

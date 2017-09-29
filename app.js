@@ -5,23 +5,44 @@ var author;
 var tweetQuote;
 var colors = ['#015d82', '#9138b7', '#2a8e83', '#f0802b'];
 var totalNumImages = 17; //number of images in /imgs folder
-
 var displayedQuotes = {};
+var quotesArray;
+var quoteCount = -1;
+
+//shuffle array helper functions
+
+function fillArray(n) {
+  var result = [];
+  for (var i = 1; i <= n; i++) {
+    result.push(i);
+  }
+  return result;
+}
+
+function shuffle(a) {
+  var j, x, i;
+  for (i = a.length; i; i--) {
+    j = Math.floor(Math.random() * i);
+    x = a[i - 1];
+    a[i - 1] = a[j];
+    a[j] = x;
+  }
+}
+
+function generateQuotesArray() {
+  quotesArray = fillArray(quotes.length);
+  shuffle(quotesArray);
+}
 
 function randomQuotes() {
-  // if all quotes have been displayed, clear object
-  if(Object.keys(displayedQuotes).length >= quotes.length){
-    displayedQuotes = {};
-  }
-
-  var randomQuoteIndex = Math.floor(Math.random() * quotes.length);
-  if (!displayedQuotes[randomQuoteIndex]) {
-    displayedQuotes[randomQuoteIndex] = true;
-    return quotes[randomQuoteIndex];
+  if (quoteCount < quotes.length) {
+    quoteCount++;
+    return quotes[quotesArray[quoteCount]];
   } else {
+    quoteCount = -1;
+    generateQuotesArray();
     randomQuotes();
   }
-  return quotes[randomQuoteIndex];
 }
 
 function randomColors() {
@@ -104,6 +125,7 @@ function getQuote() {
       }, 1000);
       $('#author').html("- " + author);
     });
+
 }
 
 
