@@ -4,7 +4,7 @@ var quote;
 var author;
 var tweetQuote;
 var colors = ['#015d82', '#9138b7', '#2a8e83', '#f0802b'];
-var totalNumImages = 17; //number of images in /imgs folder
+var totalNumImages = 46; //number of images in /imgs folder
 var displayedQuotes = {};
 var quotesArray;
 var quoteCount = -1;
