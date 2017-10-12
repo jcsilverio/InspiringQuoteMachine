@@ -63,3 +63,25 @@ img {
   background-color: #0275d8;
   border-color: #0275d8
 }
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 40px;
+  line-height: 20px;
+  /* Vertically center the text there */
+}
